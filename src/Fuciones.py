@@ -1,6 +1,6 @@
 def imprimir(ronda, n_ronda):
   
-    if(n_ronda <5):
+    if(n_ronda <=5):
         print(f'Ronda numero: {n_ronda}')
     else:
         print(f'Ronda final')
@@ -12,7 +12,7 @@ def imprimir(ronda, n_ronda):
 
 
 def ejercicio10(rondas):
-    n_ronda = 1
+    n_ronda = 0
     resul_final = {
         'Shadow': { 'kills': 0 , 'assists': 0, 'deaths': 0, 'pts': 0, 'mvps': 0},
         'Blaze': { 'kills': 0 , 'assists': 0, 'deaths': 0, 'pts': 0, 'mvps': 0},
@@ -41,6 +41,7 @@ def ejercicio10(rondas):
         resul_final[ordenados[0][0]]['mvps'] += 1
         ordenados[0][1]['mvps'] = 'si'
         imprimir(ordenados,n_ronda)
+    n_ronda = n_ronda+1
     imprimir(sorted(resul_final.items(), key = lambda x : x [1]['pts'], reverse=True), n_ronda)
     
  
