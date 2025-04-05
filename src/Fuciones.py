@@ -29,7 +29,7 @@ def ejercicio10(rondas):
         for jugador, infoRonda in nRonda.items():
             #Calcular puntos del jugador
             #Actualizar sus datos 
-            #Ordenar la tabla antes de imprimir #boolean ? loQueDevuelveEnTrue : loQueDevuelveEnFalse
+            #Ordenar la tabla antes de imprimir 
             puntos = infoRonda['kills'] * 3 + infoRonda['assists'] - (1 if infoRonda['deaths'] else 0) 
             resul_final[jugador]['pts'] += puntos
             resul_final[jugador]['kills'] += infoRonda['kills']
